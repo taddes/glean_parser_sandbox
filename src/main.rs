@@ -2,6 +2,10 @@ pub mod glean {
     pub mod server_events;
 }
 
+pub mod user_agents {
+    pub mod user_agent;
+}
+
 use crate::glean::server_events::{
     BackendObjectUpdateEvent, EventsPing, GleanEventsLogger, RequestInfo,
 };
