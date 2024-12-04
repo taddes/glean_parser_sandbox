@@ -12,6 +12,19 @@ use crate::glean::server_events::{
 use std::thread::sleep;
 use std::time::Duration;
 fn main() {
+    let headers: Vec<&str> = vec![
+    "Firefox/130.0.1 (Windows NT 10.0; Win64; x64) FxSync/1.132.0.20240913135723.desktop",
+    "Firefox/130.0.1 (Linux x86_64) FxSync/1.132.0.20240916093609.desktop",
+    "Firefox-iOS-FxA/24",
+    "Mozilla/5.0 (Linux; Android 9; SM-A920F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4216.0 Mobile Safari/537.36",
+    "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)",
+    "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
+    "Mozilla/5.0 (Linux; Android 9; SM-A920F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4216.0 Mobile Safari/537.36",
+    "Floorp/128.3.0 (Intel Mac OS X 10.15) FxSync/1.130.0.20240908033729.desktop",
+    "Mozilla/5.0 (Android 13; Mobile; rv:130.0) Gecko/130.0 Firefox/130.0",
+    "Firefox-iOS-Sync/108.1b24234 (iPad; iPhone OS 16.4.1) (Firefox)",
+    ];
+
     let logger = GleanEventsLogger {
         app_id: "test-rust-logger".to_string(),
         app_display_version: "1.0.0".to_string(),
